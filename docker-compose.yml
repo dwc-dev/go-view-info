@@ -7,4 +7,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - "1234:8080"
+    container_name: go-view-info
     restart: always
