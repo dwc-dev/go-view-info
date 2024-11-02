@@ -4,11 +4,11 @@ FROM golang:1.20-alpine
 # 设置容器内的工作目录
 WORKDIR /app
 
-# 将 Go 源代码复制到容器中
-COPY . .
+# 只复制 main.go 文件
+COPY main.go .
 
-# 构建 Go 应用
-RUN go build -o server .
+# 直接编译 main.go
+RUN go build -o server main.go
 
 # 暴露服务器运行的端口
 EXPOSE 8080
