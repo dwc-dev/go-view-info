@@ -29,6 +29,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Protocol Version: %s\n\n", r.Proto)
 
 	fmt.Fprintf(w, "Request Headers:\n")
+	fmt.Fprintf(w, "Host: %s\n", r.Host) // 从 r.Host 获取 Host
 	var headers []string
 	for name := range r.Header {
 		headers = append(headers, name)
