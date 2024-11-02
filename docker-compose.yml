@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: go-view-info:latest
     ports:
       - "1234:8080"
     container_name: go-view-info
